@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 // import functions and grab DOM elements
 import { makeStatsString } from './utils.js';
 const headDropdown = document.getElementById('head-dropdown');
@@ -14,7 +15,9 @@ const catchphraseButton = document.getElementById('catchphrase-button');
 // set state for how many times the user changes the head, middle, and bottom
 // set state for all of the character's catchphrases
 
-headDropdown.addEventListener('change', () => {
+headDropdown.addEventListener('change', (e) => {
+    const value = e.target.value;
+    headimage.src = `./assets/Head Drop Down/head-${value}.png`;
     // get the value of the head dropdown
 
     // increment the head change count state
